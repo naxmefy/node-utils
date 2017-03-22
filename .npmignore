@@ -1,0 +1,4 @@
+/examples
+/docs
+.conventional-changelog-lintrc
+.cz-config.js

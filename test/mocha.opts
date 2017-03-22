@@ -1,0 +1,9 @@
+--recursive
+--colors
+--full-trace
+--bail
+--compilers ts:ts-node/register
+--require source-map-support/register
+--require should
+
+src/**/*.spec.ts

@@ -1,0 +1,82 @@
+{
+  "name": "@ninevillage/utils",
+  "version": "0.0.0",
+  "description": "collection of useful utilities",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "typings": "./lib/index.d.ts",
+  "author": {
+    "name": "Ninevillage",
+    "email": "info@ninevillage.com",
+    "url": "https://www.ninevillage.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninevillage/koa.git"
+  },
+  "homepage": "https://github.com/ninevillage/koa",
+  "bugs": {
+    "email": "info@ninevillage.com",
+    "url": "https://github.com/ninevillage/koa/issues"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "precommit": "npm run lint",
+    "commit": "git-cz",
+    "commitmsg": "conventional-changelog-lint -e",
+    "compile": "rimraf lib && tsc",
+    "lint": "tslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "nyc mocha"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@ninevillage/tslint-config-standard": "^1.1.0",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.8",
+    "@types/should": "^8.1.30",
+    "commitizen": "^2.9.6",
+    "conventional-changelog-lint": "^1.1.7",
+    "conventional-changelog-lint-config-angular": "^0.4.0",
+    "cz-customizable": "^4.0.0",
+    "husky": "^0.13.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "rimraf": "^2.6.1",
+    "should": "^11.2.1",
+    "source-map-support": "^0.4.14",
+    "ts-node": "^3.0.2",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
+  }
+}
