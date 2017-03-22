@@ -21,7 +21,7 @@
     "url": "https://github.com/ninevillage/koa/issues"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=7.6"
   },
   "scripts": {
     "precommit": "npm run lint",

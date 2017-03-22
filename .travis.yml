@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+ - 7
+
+before_script:
+ - npm install -g nyc codecov
+after_script:
+ - nyc report --reporter=text-lcov > coverage.lcov
+ - codecov
